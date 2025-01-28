@@ -1,9 +1,11 @@
 # Libreria_Distrital
 Este repositorio contiene el desarrollo del proyecto final de Modelos de Programación, titulado "Librería Distrital". El objetivo principal de este sistema es ofrecer una solución eficiente y estructurada para la gestión de documentos, permitiendo el almacenamiento, consulta y organización de información de manera óptima.
+
 📌 Características
 Gestión de documentos: Registro, actualización y eliminación de documentos.
 Consulta eficiente: Búsqueda de documentos según diferentes criterios.
 Interfaz intuitiva: Diseño pensado en la experiencia del usuario.
+
 💡 Patrones de diseño implementados
 1. DAO (Data Access Object) y DTO
 Propósito:
@@ -34,10 +36,12 @@ Propósito:
 Construir objetos complejos (documentos) de manera controlada.
 Aplicación:
 Garantiza que todos los campos requeridos estén completados correctamente.
+
 💻 Tecnologías utilizadas
 Java: Lenguaje de programación principal.
 Estructuras de datos avanzadas: Para optimizar la búsqueda y almacenamiento.
 Gestión de archivos: Persistencia de datos en el sistema.
+
 👥 Equipo de desarrollo
 David Ospino
 Julian Cabrera
