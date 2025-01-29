@@ -1,13 +1,12 @@
 package control;
 
 import java.util.Scanner;
-import model.BDConnect.BDConnect;
 import model.DAO.UserDAO;
 
 public class Prubas {
     public static void main(String[] args) {
-        BDConnect dbConnect = new BDConnect();
-        UserDAO userDAO = new UserDAO(dbConnect);
+        // Ya esta con el singleton, uso la misma instancia
+        UserDAO userDAO = new UserDAO(); // UserDAO obtiene la instancia única de BDConnect internamente
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Ingrese el nombre de usuario: ");
@@ -24,7 +23,6 @@ public class Prubas {
             System.out.println("Credenciales incorrectas.");
         }
 
-        dbConnect.closeConnection();
         scanner.close();
     }
 }

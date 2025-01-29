@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 /**
  * Clase para gestionar la conexión a una base de datos Oracle.
+ * Implementa el patrón Singleton para asegurar una única instancia.
  */
 public class BDConnect {
     private static final String URL = "jdbc:oracle:thin:@localhost:1521/xepdb1";
@@ -13,8 +14,25 @@ public class BDConnect {
     private static final String PASSWORD = "D4V1D";
     private Connection connection;
 
-    public BDConnect() {
+    // Instancia única de la clase
+    private static BDConnect instance;
+
+    // Constructor privado para evitar la creación de instancias fuera de la clase
+    private BDConnect() {
         openConnection();
+    }
+
+    /**
+     * Método estático que devuelve la única instancia de la clase.
+     * Si no existe, la crea.
+     *
+     * @return La única instancia de BDConnect.
+     */
+    public static BDConnect getInstance() {
+        if (instance == null) {
+            instance = new BDConnect();
+        }
+        return instance;
     }
 
     /**
@@ -47,6 +65,11 @@ public class BDConnect {
         }
     }
 
+    /**
+     * Método para obtener la conexión a la base de datos.
+     *
+     * @return La conexión a la base de datos.
+     */
     public Connection getConnection() {
         return connection;
     }

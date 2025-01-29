@@ -12,13 +12,15 @@ import java.util.List;
 public class UserDAO implements DAO<User> {
     private BDConnect dbConnect;
 
-    public UserDAO(BDConnect dbConnect) {
-        this.dbConnect = dbConnect;
+    // Constructor sin parámetros, ya que obtenemos la instancia de BDConnect directamente
+    public UserDAO() {
+        this.dbConnect = BDConnect.getInstance(); // Obtenemos la instancia única de BDConnect
     }
 
     /**
      * Valida si un usuario existe en la base de datos por su contraseña.
      * 
+     * @param username Nombre de usuario.
      * @param password Contraseña del usuario.
      * @return Nombre del usuario si existe, null si no.
      */
@@ -32,10 +34,11 @@ public class UserDAO implements DAO<User> {
                 if (rs.next()) {
                     return rs.getString("name_user"); 
                 }
-                dbConnect.closeConnection();
             }
         } catch (SQLException e) {
             System.err.println("Error en la validación del usuario: " + e.getMessage());
+        } finally {
+            dbConnect.closeConnection(); // Cerramos la conexión después de usarla
         }
         return null;
     }
