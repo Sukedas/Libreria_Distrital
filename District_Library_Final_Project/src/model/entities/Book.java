@@ -3,37 +3,37 @@ package model.entities;
 import java.util.Date;
 
 public class Book extends Document {
-	
-	public int pages_number;
-	public int book_ISBN;
-	
-	public Book(String title, String author, String type, String state, Date publication_date) {
-		super(title, author, type, state, publication_date);
+    private int pages_number;
+    private String book_ISBN;
+    
+    
+
+    public Book(String title_docu, String author_docu, String type_docu, Date mon_pub_docu, Date day_pub_docu,
+			int users_id_user) {
+		super(title_docu, author_docu, type_docu, mon_pub_docu, day_pub_docu, users_id_user);
 	}
 
-	public Book(String title, String author, String type, String state, Date publication_date, int pages_number,
-			int book_ISBN) {
-		super(title, author, type, state, publication_date);
-		this.pages_number = pages_number;
-		this.book_ISBN = book_ISBN;
-	}
+	public Book(String title_docu, String author_docu, String type_docu, Date mon_pub_docu, Date day_pub_docu,
+                int users_id_user, int pages_number, String book_ISBN) {
+        super(title_docu, author_docu, type_docu, mon_pub_docu, day_pub_docu, users_id_user);
+        this.pages_number = pages_number;
+        this.book_ISBN = book_ISBN;
+    }
 
-	public int getPages_number() {
-		return pages_number;
-	}
+    // Getters y Setters
+    public int getPages_number() {
+        return pages_number;
+    }
 
-	public void setPages_number(int pages_number) {
-		this.pages_number = pages_number;
-	}
+    public void setPages_number(int pages_number) {
+        this.pages_number = pages_number;
+    }
 
-	public int getBook_ISBN() {
-		return book_ISBN;
-	}
+    public String getBook_ISBN() {
+        return book_ISBN;
+    }
 
-	public void setBook_ISBN(int book_ISBN) {
-		this.book_ISBN = book_ISBN;
-	}
-	
-	
-
+    public void setBook_ISBN(String book_ISBN) {
+        this.book_ISBN = book_ISBN;
+    }
 }

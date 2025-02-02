@@ -1,26 +1,22 @@
 package model.entities;
 
 import java.util.Date;
-///no estoys seguro si saca de la libreria sql o del util ojo con los bugs >:c
+
 public class Article extends Document {
-	public int SSN;
-	
-	public Article(String title, String author, String type, String state, Date publication_date) {
-		super(title, author, type, state, publication_date);
-		
-	}
+    private String SSN;
 
-	public Article(String title, String author, String type, String state, Date publication_date, int sSN) {
-		super(title, author, type, state, publication_date);
-		SSN = sSN;
-	}
+    public Article(String title_docu, String author_docu, String type_docu, Date mon_pub_docu, Date day_pub_docu,
+                   int users_id_user, String SSN) {
+        super(title_docu, author_docu, type_docu, mon_pub_docu, day_pub_docu, users_id_user);
+        this.SSN = SSN;
+    }
 
-	public int getSSN() {
-		return SSN;
-	}
+    // Getters y Setters
+    public String getSSN() {
+        return SSN;
+    }
 
-	public void setSSN(int sSN) {
-		SSN = sSN;
-	}
-
+    public void setSSN(String SSN) {
+        this.SSN = SSN;
+    }
 }
