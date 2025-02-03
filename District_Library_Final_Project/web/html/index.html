@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	  <meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <title>Inicio</title>
+	  <link rel="stylesheet" href="../css/dashboard.css">
+	</head>
+	<body>
+	
+	  <!-- Menú lateral -->
+	  <div class="sidebar" id="sidebar">
+		  <div class="header">
+		  	<div class="menu-btn" id="menu-btn">
+		  		<ion-icon name="chevron-back-outline"></ion-icon>
+		  	</div>
+		  	<div class="brand">
+		  		<ion-icon name="library-outline"></ion-icon>
+		  		<span>Librería UD</span>
+		  	</div>
+		  </div>
+		  
+		  <div class="menu-container">
+		  		<div class="search">
+		  			<ion-icon name="search-outline"></ion-icon>
+		  			<input type="search" placeholder="search">
+		  		</div>	 
+		  		<ul class="menu">
+			  		<li class="menu-item menu-item-static active">
+			  			<a href="#" class="menu-link">
+			  				<ion-icon name="home-outline"></ion-icon>
+			  				<span>Inicio</span>
+			  			</a>
+			  		</li>
+			  		<li class="menu-item menu-item-dropdown">
+			  			<a href="#" class="menu-link">
+			  				<ion-icon name="documents-outline"></ion-icon>
+			  				<span>Documentos</span>
+			  				<ion-icon name="chevron-down-outline"></ion-icon>
+			  			</a>
+			  			<ul class="sub-menu">
+			  				<li>
+			  					<a href="#" class="sub-menu-link">Artículos</a>
+			  				</li>
+			  				<li>
+			  					<a href="#" class="sub-menu-link">Ponencias</a>
+			  				</li>
+			  				<li>
+			  					<a href="#" class="sub-menu-link">Libros</a>
+			  				</li>
+			  			</ul>
+			  		</li>
+			  		<li class="menu-item menu-item-static">
+			  			<a href="#" class="menu-link">
+			  				<ion-icon name="document-lock-outline"></ion-icon>
+			  				<span>Reservas</span>
+			  			</a>
+			  		</li>
+			  		<li class="menu-item menu-item-static">
+			  			<a href="#" class="menu-link">
+			  				<ion-icon name="time-outline"></ion-icon>
+			  				<span>Historial</span>
+			  			</a>
+			  		</li>
+		  		</ul> 	
+		  </div>
+		  <div class="footer">
+		  	<ul class="menu">
+				<li class="menu-item menu-item-static">
+			  		<a href="#" class="menu-link">
+			  			<ion-icon name="settings-outline"></ion-icon>
+			  			<span>Ajustes</span>
+			  		</a>
+				</li>		  	
+		  	</ul>
+		  	<div class="user">
+		  		<div class="user-img">
+			  		<img alt="user" src="../img/user.jpg">
+			  	</div>
+			  	<div class="user-data">
+			  		<span class="name">Nombre de usuario</span>
+			  		<span class="email">email de usuario</span>
+			  	</div>
+			  	<div class="user-icon">
+			  		<ion-icon name="exit-outline"></ion-icon>
+			  	</div>
+		  	</div>
+		  </div>
+	  </div>
+	
+	  <!-- Contenido principal -->
+	  <main>
+	    <!-- Sección de widgets -->
+	    <section class="widgets">
+	      <div class="widget">
+	        <h2>Total Documents</h2>
+	        <p class="widget-value">150</p>
+	      </div>
+	      <div class="widget">
+	        <h2>Reserved Documents</h2>
+	        <p class="widget-value">10</p>
+	      </div>
+	      <div class="widget">
+	        <h2>Recent Modifications</h2>
+	        <p class="widget-value">5</p>
+	      </div>
+	    </section>
+	  </main>
+	  <script type="text/javascript" src="../javaScript/menu.js"></script>
+	  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>
