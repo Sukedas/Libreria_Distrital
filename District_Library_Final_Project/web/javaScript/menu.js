@@ -1,9 +1,11 @@
 const menusItemsDropDown = document.querySelectorAll('.menu-item-dropdown');
 const sidebar = document.getElementById('sidebar');
 const menuBtn = document.getElementById('menu-btn');
+const main = document.getElementById('main');
 
 menuBtn.addEventListener('click',()=>{
 	sidebar.classList.toggle('minimize');
+	main.classList.toggle('minimize');
 });
 
 menusItemsDropDown.forEach((menuItem)=>{
